@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopción de Perros</title>
+    <link rel="stylesheet" href="Principal.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyCKDC3ZQ5-eYT8FIZU9kNm7GYMOrFIkJzw",
+          authDomain: "adopcionbd.firebaseapp.com",
+          projectId: "adopcionbd",
+          storageBucket: "adopcionbd.appspot.com",
+          messagingSenderId: "1011467660259",
+          appId: "1:1011467660259:web:923600e3cadafcb7f38ed6"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        const DB = firebase.firestore();
+      </script>
+</head>
+
+<body>
+    
+    <header>
+        <div class="black-band">
+            <h1>Adopción de Perros</h1>
+            <img src="Logo.png" alt="Foto de logo">
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="left-section" id = "left">
+            
+        </section>
+
+        <section class="right-section">
+            <h2>
+                Si encontraste un perrito y no puedes adoptarlo, puedes registrarlo en nuestra pagina para encontrarle un hogar
+            </h2>
+            <div class="container">
+                <div class="form-container">
+                    <div class="form">
+                        <p>
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name">
+                        </p>
+                        <p>
+                            <label for="age">Edad:</label>
+                            <input type="text" id="age" name="age">
+                        </p>
+                        <p>
+                            <label for="place">Lugar:</label>
+                            <input type="text" id="place" name="place">
+                        </p>
+                        <p>
+                            <label for="type">Raza:</label>
+                            <select id="type">
+                                <option>Chico</option>
+                                <option>Mediano</option>
+                                <option>Grande</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="color">Color:</label>
+                            <input type="text" id="color" name="color">
+                        </p>
+                    </div>
+                    <button onclick="send()">Enviar</button>
+                </div>
+            </div>
+            <img src="casa.png" alt="">
+        </section>
+    </div>
+</body>
+<script src="Principal.js"></script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="contacto.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyCKDC3ZQ5-eYT8FIZU9kNm7GYMOrFIkJzw",
+          authDomain: "adopcionbd.firebaseapp.com",
+          projectId: "adopcionbd",
+          storageBucket: "adopcionbd.appspot.com",
+          messagingSenderId: "1011467660259",
+          appId: "1:1011467660259:web:923600e3cadafcb7f38ed6"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        const DB = firebase.firestore();
+      </script>
+</head>
+
+<body>
+    <header>
+        <div class="black-band">
+            <h1>Contacto</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>
+            Por favor llena este formulario, nosotros nos pondremos en contacto contigo para continuar con el proceso C:
+        </h2>
+        <div class="form-container">
+            <div class="form">
+                <p>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name">
+                </p>
+                <p>
+                    <label for="phone">Telefono:</label>
+                    <input type="text" id="phone" name="phone">
+                </p>
+                <p>
+                    <label for="place">Direccion:</label>
+                    <input type="text" id="place" name="place">
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                </p>
+            </div>
+            <button onclick="send()">Enviar</button>
+        </div>
+    </div>
+</body>
+<script src="contacto.js"></script>
+</html>
